@@ -1,5 +1,6 @@
 import { mainConfig } from "../framework/configs/main.wdio.conf.js"
-
+import { v4 as uuidv4 } from 'uuid';
+ 
 export const config = {
   ...mainConfig,
   ...{
@@ -18,7 +19,7 @@ export const config = {
             "--headless",
             "--no-sandbox",
             "--disable-gpu",
-            `--user-data-dir=/app/chrome-user-data-${new Date().getTime()}`
+            `--user-data-dir=/app/chrome-user-data-${uuidv4()}`
           ]
         },
       },
