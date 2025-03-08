@@ -2,7 +2,8 @@
   "name": "a1qa-wdio-framework",
   "type": "module",
   "scripts": {
-    "chrome.cucumber": "wdio run ./configs/chrome.cucumber.conf.js"
+    "chrome.cucumber": "wdio run ./configs/chrome.cucumber.conf.js",
+    "firefox.cucumber": "wdio run ./configs/chrome.cucumber.conf.js"
   },
   "dependencies": {
     "@babel/core": "^7.24.3",

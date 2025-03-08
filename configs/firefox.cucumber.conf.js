@@ -10,8 +10,8 @@ export const config = {
     specs: ["../test/features/**/*.feature"],
     capabilities: [
       {
-        browserName: "chrome",
-        "goog:chromeOptions": {          
+        browserName: "firefox",
+        "moz:firefoxOptions": {
           args: [
             "--start-maximized",
             "--lang=en-EN",
