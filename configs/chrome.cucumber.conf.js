@@ -18,6 +18,7 @@ export const config = {
             "--headless",
             "--no-sandbox",
             "--disable-gpu",
+            `--user-data-dir=/tmp/chrome-user-data-${new Date().getTime()}`
           ]
         },
       },
