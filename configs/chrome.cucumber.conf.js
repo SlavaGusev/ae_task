@@ -11,8 +11,14 @@ export const config = {
     capabilities: [
       {
         browserName: "chrome",
-        "goog:chromeOptions": {
-          args: ["--start-maximized", "--lang=en-EN"]
+        "goog:chromeOptions": {          
+          args: [
+            "--start-maximized",
+            "--lang=en-EN",
+            "--headless",
+            "--no-sandbox",
+            "--disable-gpu",
+          ]
         },
       },
     ],
