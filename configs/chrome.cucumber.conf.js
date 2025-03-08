@@ -1,4 +1,4 @@
-import { downloadDir, mainConfig } from "../framework/configs/main.wdio.conf.js"
+import { mainConfig } from "../framework/configs/main.wdio.conf.js"
 
 export const config = {
   ...mainConfig,
@@ -12,10 +12,7 @@ export const config = {
       {
         browserName: "chrome",
         "goog:chromeOptions": {
-          args: ["--start-maximized", "--lang=en-EN"],
-          prefs: {
-            "download.default_directory": downloadDir,
-          },
+          args: ["--start-maximized", "--lang=en-EN"]
         },
       },
     ],

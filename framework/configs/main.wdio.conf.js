@@ -1,8 +1,3 @@
-import path from "node:path"
-import fs from "fs-extra"
-
-export const downloadDir = path.resolve("./tmp")
-
 export const mainConfig = {
   baseUrl: "https://store.steampowered.com/",
   runner: "local",
@@ -26,14 +21,6 @@ export const mainConfig = {
       },
     ],
   ],
-
-  onPrepare: function () {
-    fs.ensureDir(downloadDir)
-  },
-
-  after: function (result, capabilities, specs) {
-    fs.emptyDir(downloadDir)
-  },
 
   afterTest: async function (test, context, { error, result, duration, passed, retries }) {
     if (!passed) {
